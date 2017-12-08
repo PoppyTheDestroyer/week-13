@@ -1,0 +1,19 @@
+{
+  "name": "week-13",
+  "version": "1.0.0",
+  "description": "Classwork",
+  "main": "walkthrough.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmsaenz5/week-13.git"
+  },
+  "author": "JMS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmsaenz5/week-13/issues"
+  },
+  "homepage": "https://github.com/jmsaenz5/week-13#readme"
+}
