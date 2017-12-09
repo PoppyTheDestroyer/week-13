@@ -1,17 +1,18 @@
 const connectObject = {
     host: "localhost",
     port: 3306,
-    user: "",
+    user: "root",
     password: "",
     database: "ice_creamDB"
-}
+};
 
-const mySql = require("mysql")
-const connection = mySql.createConnection(connectObject)
+const mySql = require("mysql");
+const connection = mySql.createConnection(connectObject);
 
-connnection.connect(function(error){
-    if (error) {
-        throw error
+connection.connect(function(err){
+    if (err) {
+        throw err
     }
-    console.log(`Connected as ID: ${connection.threadId}`)
-})
+    console.log(`Connected as ID: ${connection.threadId}`);
+    connection.end();
+});

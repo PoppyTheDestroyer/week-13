@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jmsaenz5/week-13/issues"
   },
-  "homepage": "https://github.com/jmsaenz5/week-13#readme"
+  "homepage": "https://github.com/jmsaenz5/week-13#readme",
+  "dependencies": {
+    "mysql": "^2.15.0"
+  }
 }
