@@ -5,7 +5,7 @@ const connectObject = {
     password: "",
     database: "top_songsDB"
 };
-
+var num;
 const mySql = require("mysql");
 const inquirer = require("inquirer");
 const connection = mySql.createConnection(connectObject);
@@ -24,9 +24,8 @@ function artistSongs(artist) {
         console.log(response);
     });
 };
-var num = 10;
-var mults = "SELECT artist FROM top5000 GROUP BY artist HAVING COUNT(*) > " + num + ";"
 function multi(num) {
+    var mults = "SELECT artist FROM top5000 GROUP BY artist HAVING COUNT(*) > " + num + ";"    
     connection.query(mults, function (err, response) {
         if (err) {
             throw err
@@ -38,8 +37,8 @@ function multi(num) {
 
 var start = 450
 var end = 500
-function range(begin, finsih) {
-    var fromTo = "SELECT * FROM top5000 WHERE position BETWEEN " + begin + " and " + finsih + ";";
+function range(begin, finish) {
+    var fromTo = "SELECT * FROM top5000 WHERE position BETWEEN " + begin + " and " + finish + ";";
     connection.query(fromTo, function (err, response) {
         if (err) {
             throw err
